@@ -13,7 +13,7 @@ const createWindow = () => {
    // fullscreen: true, // Define se a janela deve iniciar em tela cheia
     // alwaysOnTop: true, // Define se a janela deve ficar sempre em cima de outras janela
     // transparent: true,// define
-    icon:'',// define o icone da janela 
+    icon:'bella.cake.jpg',// define o icone da janela 
     // frame:false,
 
   })
