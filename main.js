@@ -1,20 +1,31 @@
-// importando os mudulos app e browserwindow do electron 
 const { app, BrowserWindow } = require('electron')
-
-// define a função createwindow do electron 
+ 
 const createWindow = () => {
-    // cria uma nova instancia do browserwindow com as dimensões especificadas
+ 
   const win = new BrowserWindow({
-    width: 800, // define a largura da janela 
-    height: 600 // define a largura da janela 
+    width: 800,
+    height: 600,
+    // resizable: false, // Define se a janela pode ser redimencionada
+   // movable: false, // Define se a janela pode ser movida
+   // minimizable: false, // Define se a janela pode ser minimizada
+   // maximizable: false, // Define se a janela pode ser maximizada
+   // closable: false, // Define se a janela pode ser fechada
+   // fullscreen: true, // Define se a janela deve iniciar em tela cheia
+    // alwaysOnTop: true, // Define se a janela deve ficar sempre em cima de outras janela
+    // transparent: true,// define
+    icon:'',// define o icone da janela 
+    // frame:false,
+
   })
-  // carrega o arquivo index.html na janela criada 
+
+    win.setMenuBarVisibility(false) //ocultar a barra de menu da janela 
+ 
   win.loadFile('index.html')
 }
-
-
-// quando o aplicativo estiver pronto,chama a funçao createwindow para criar a janela principal 
+ 
+ 
 app.whenReady().then(() => {
- // executa a funçao createwindow para criar a janela principal 
+ 
+ 
   createWindow()
 })
